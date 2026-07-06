@@ -1,0 +1,3 @@
+module.exports=[3363,a=>{"use strict";var b=a.i(7997);a.s(["default",0,function(){return(0,b.jsx)("main",{className:"flex min-h-screen items-center justify-center bg-sky-50 p-6 text-center text-slate-900",children:(0,b.jsxs)("div",{children:[(0,b.jsx)("p",{className:"text-sm font-semibold uppercase tracking-[0.3em] text-sky-700",children:"404"}),(0,b.jsx)("h1",{className:"mt-4 text-4xl font-black",children:"Página no encontrada"}),(0,b.jsx)("p",{className:"mt-3 text-slate-600",children:"La invitación que buscas no está disponible."})]})})}])},17537,a=>{a.n(a.i(3363))}];
+
+//# sourceMappingURL=src_app_not-found_tsx_1863-sq._.js.map
