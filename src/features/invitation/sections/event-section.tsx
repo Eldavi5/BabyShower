@@ -87,27 +87,40 @@ export function EventSection({ locale }: EventSectionProps) {
               {content.locationImageCaption}
             </p>
 
-            {/* Creative visual representation of a map with a landing pin */}
-            <div className="relative overflow-hidden rounded-[1.6rem] border border-sky-100 bg-sky-50/40 p-4 aspect-[1.8/1] flex items-center justify-center">
-              {/* Map grid decoration */}
-              <div className="absolute inset-0 bg-[radial-gradient(#bae6fd_1.2px,transparent_1.2px)] [background-size:16px_16px] opacity-40" />
-              {/* Flight vectors decorative lines */}
-              <svg className="absolute inset-0 h-full w-full stroke-sky-200/50" fill="none">
-                <path d="M-10 40 Q 60 80 120 20 T 300 120" strokeWidth="6" />
-                <path d="M50 -10 L 150 180" strokeWidth="4" />
-                <path d="M120 -10 L 80 180" strokeWidth="3" />
-              </svg>
+            {/* Real Google Maps embed iframe with absolute custom airplane pin */}
+            <div className="relative overflow-hidden rounded-[1.6rem] border border-sky-100/50 aspect-[1.8/1] flex items-center justify-center bg-sky-50 shadow-inner">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d742.9382988450034!2d-88.32356683028934!3d41.85513879710349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880efcccde91cb91%3A0x2139a0e6a1563fd!2s1003%20Lorlyn%20Cir%2C%20Batavia%2C%20IL%2060510%2C%20EE.%20UU.!5e0!3m2!1ses-419!2smx!4v1783378215691!5m2!1ses-419!2smx"
+                className="absolute border-0 opacity-95"
+                style={{
+                  top: "-52px",
+                  left: "-90px",
+                  width: "calc(100% + 180px)",
+                  height: "calc(100% + 104px)"
+                }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="Google Maps Location"
+              />
+              {/* Overlay cover to prevent capture of mouse wheel scroll on the landing page */}
+              <div className="absolute inset-0 z-0 bg-transparent" />
               
-              {/* Glowing Airplane Landing Center */}
-              <div className="relative flex flex-col items-center">
-                <span className="absolute -top-12 animate-bounce flex flex-col items-center">
-                  {/* Little map pin airplane */}
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-sky-700 text-white shadow-lg border-2 border-white text-base">
-                    ✈️
-                  </span>
-                  <span className="w-0.5 h-3.5 bg-sky-700" />
+              {/* Radar Landing Pad cover that completely covers the default Google red pin marker */}
+              <div className="absolute top-[49%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full border-2 border-sky-600 shadow-md flex items-center justify-center z-10">
+                {/* Inner target circle */}
+                <div className="w-4.5 h-4.5 bg-sky-600 rounded-full flex items-center justify-center">
+                  <div className="w-2 h-2 bg-white rounded-full" />
+                </div>
+                {/* Pulse ring */}
+                <div className="absolute w-full h-full rounded-full border-2 border-sky-400 animate-ping opacity-35" />
+              </div>
+
+              {/* Custom bouncing Airplane pin floating above the landing target center */}
+              <div className="absolute top-[41%] left-[50%] -translate-x-[50%] -translate-y-1/2 z-15 pointer-events-none">
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-sky-700 text-white shadow-[0_8px_20px_rgba(3,105,161,0.35)] border-2 border-white text-base animate-bounce">
+                  ✈️
                 </span>
-                <span className="h-3.5 w-11 rounded-full bg-sky-950/15 blur-[2px] mt-6 animate-pulse" />
               </div>
             </div>
           </div>

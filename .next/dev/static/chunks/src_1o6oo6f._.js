@@ -22,7 +22,7 @@ function PaperPlane({ className = "", size = 48 }) {
         viewBox: "0 0 24 24",
         fill: "none",
         stroke: "currentColor",
-        strokeWidth: "2",
+        strokeWidth: "2.2",
         strokeLinecap: "round",
         strokeLinejoin: "round",
         className: `text-sky-400/50 ${className}`,
@@ -52,31 +52,18 @@ function PaperPlane({ className = "", size = 48 }) {
     }, this);
 }
 _c = PaperPlane;
-// Retro Cartoon Airplane SVG with customizable size
-function CartoonPlane({ className = "", size = 64 }) {
+// Realistic modern passenger jet airliner SVG with customizable size
+function RealisticAirliner({ className = "", size = 64 }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
         width: size,
         height: size,
-        viewBox: "0 0 56 56",
+        viewBox: "0 0 64 64",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
         className: `text-sky-500/55 ${className}`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                d: "M12 28L4 16H8L18 28Z",
-                fill: "currentColor",
-                opacity: "0.75"
-            }, void 0, false, {
-                fileName: "[project]/src/components/ui/sky-background.tsx",
-                lineNumber: 36,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
-                x: "10",
-                y: "22",
-                width: "32",
-                height: "14",
-                rx: "7",
+                d: "M10 32 C 10 27, 20 25, 34 25 C 48 25, 58 27, 62 32 C 58 37, 48 39, 34 39 C 20 39, 10 37, 10 32 Z",
                 fill: "currentColor",
                 stroke: "#FFFFFF",
                 strokeWidth: "1.2"
@@ -86,21 +73,107 @@ function CartoonPlane({ className = "", size = 64 }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                d: "M28 22C31 22 36 25 36 29H28V22Z",
-                fill: "#FFFFFF",
-                opacity: "0.65"
+                d: "M54 29 C 56 29, 58 30, 59 32 L 53 32 Z",
+                fill: "#E0F2FE"
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/sky-background.tsx",
-                lineNumber: 38,
+                lineNumber: 44,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                cx: "22",
+                cy: "32",
+                r: "0.95",
+                fill: "#FFFFFF"
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/sky-background.tsx",
+                lineNumber: 46,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                cx: "27",
+                cy: "32",
+                r: "0.95",
+                fill: "#FFFFFF"
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/sky-background.tsx",
+                lineNumber: 47,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                cx: "32",
+                cy: "32",
+                r: "0.95",
+                fill: "#FFFFFF"
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/sky-background.tsx",
+                lineNumber: 48,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                cx: "37",
+                cy: "32",
+                r: "0.95",
+                fill: "#FFFFFF"
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/sky-background.tsx",
+                lineNumber: 49,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                cx: "42",
+                cy: "32",
+                r: "0.95",
+                fill: "#FFFFFF"
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/sky-background.tsx",
+                lineNumber: 50,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                d: "M24 35L16 48C15 50 19 51 21 49L32 35H24Z",
+                d: "M28 25 L 12 8 C 10 6, 14 4, 18 8 L 38 25 Z",
                 fill: "currentColor",
-                opacity: "0.85"
+                opacity: "0.85",
+                stroke: "#FFFFFF",
+                strokeWidth: "0.8"
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/sky-background.tsx",
-                lineNumber: 39,
+                lineNumber: 53,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                d: "M28 39 L 12 56 C 10 58, 14 60, 18 56 L 38 39 Z",
+                fill: "currentColor",
+                stroke: "#FFFFFF",
+                strokeWidth: "0.8"
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/sky-background.tsx",
+                lineNumber: 55,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
+                x: "22",
+                y: "44",
+                width: "7",
+                height: "13",
+                rx: "2.5",
+                fill: "#1E293B",
+                stroke: "#FFFFFF",
+                strokeWidth: "0.5"
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/sky-background.tsx",
+                lineNumber: 57,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                d: "M14 25 L 5 11 C 3 9, 7 7, 9 9 L 20 25 Z",
+                fill: "currentColor",
+                opacity: "0.9",
+                stroke: "#FFFFFF",
+                strokeWidth: "0.8"
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/sky-background.tsx",
+                lineNumber: 59,
                 columnNumber: 7
             }, this)
         ]
@@ -110,7 +183,7 @@ function CartoonPlane({ className = "", size = 64 }) {
         columnNumber: 5
     }, this);
 }
-_c1 = CartoonPlane;
+_c1 = RealisticAirliner;
 // Cloud SVG with customizable size
 function SkyCloud({ className = "", width = 120, height = 70 }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -123,12 +196,12 @@ function SkyCloud({ className = "", width = 120, height = 70 }) {
             d: "M20 50C10 50 2 42 2 32C2 23 9 16 18 15C19 9 25 3 32 3C39 3 45 7 48 13C52 7 59 3 67 3C78 3 87 11 89 22C95 21 100 24 103 29C109 30 114 36 114 43C114 52 106 60 97 60H20V50Z"
         }, void 0, false, {
             fileName: "[project]/src/components/ui/sky-background.tsx",
-            lineNumber: 54,
+            lineNumber: 74,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/ui/sky-background.tsx",
-        lineNumber: 47,
+        lineNumber: 67,
         columnNumber: 5
     }, this);
 }
@@ -167,12 +240,12 @@ function SkyBackground() {
                     className: "text-sky-500/50"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/sky-background.tsx",
-                    lineNumber: 80,
+                    lineNumber: 100,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/sky-background.tsx",
-                lineNumber: 76,
+                lineNumber: 96,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -185,30 +258,30 @@ function SkyBackground() {
                     height: 75
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/sky-background.tsx",
-                    lineNumber: 88,
+                    lineNumber: 108,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/sky-background.tsx",
-                lineNumber: 84,
+                lineNumber: 104,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute left-[5%] top-[32%] transition-transform duration-100 ease-out plane-float",
                 style: {
-                    transform: `translateY(${scrollY * -0.25}px) rotate(15deg)`
+                    transform: `translateY(${scrollY * -0.25}px) rotate(10deg)`
                 },
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CartoonPlane, {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(RealisticAirliner, {
                     size: 72,
                     className: "text-sky-500/55"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/sky-background.tsx",
-                    lineNumber: 96,
+                    lineNumber: 116,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/sky-background.tsx",
-                lineNumber: 92,
+                lineNumber: 112,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -221,12 +294,12 @@ function SkyBackground() {
                     className: "text-sky-400/50"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/sky-background.tsx",
-                    lineNumber: 104,
+                    lineNumber: 124,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/sky-background.tsx",
-                lineNumber: 100,
+                lineNumber: 120,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -240,12 +313,12 @@ function SkyBackground() {
                     className: "text-white/45"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/sky-background.tsx",
-                    lineNumber: 112,
+                    lineNumber: 132,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/sky-background.tsx",
-                lineNumber: 108,
+                lineNumber: 128,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -253,17 +326,17 @@ function SkyBackground() {
                 style: {
                     transform: `translateY(${scrollY * -0.18}px) scaleX(-1) rotate(-5deg)`
                 },
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CartoonPlane, {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(RealisticAirliner, {
                     size: 64,
                     className: "text-sky-500/60"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/sky-background.tsx",
-                    lineNumber: 120,
+                    lineNumber: 140,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/sky-background.tsx",
-                lineNumber: 116,
+                lineNumber: 136,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -276,12 +349,12 @@ function SkyBackground() {
                     className: "text-sky-500/55"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/sky-background.tsx",
-                    lineNumber: 128,
+                    lineNumber: 148,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/sky-background.tsx",
-                lineNumber: 124,
+                lineNumber: 144,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -289,17 +362,17 @@ function SkyBackground() {
                 style: {
                     transform: `translateY(${scrollY * -0.15}px) rotate(8deg)`
                 },
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CartoonPlane, {
-                    size: 75,
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(RealisticAirliner, {
+                    size: 76,
                     className: "text-sky-400/60"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/sky-background.tsx",
-                    lineNumber: 136,
+                    lineNumber: 156,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/sky-background.tsx",
-                lineNumber: 132,
+                lineNumber: 152,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -312,18 +385,18 @@ function SkyBackground() {
                     className: "text-sky-400/50"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/sky-background.tsx",
-                    lineNumber: 144,
+                    lineNumber: 164,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/sky-background.tsx",
-                lineNumber: 140,
+                lineNumber: 160,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ui/sky-background.tsx",
-        lineNumber: 74,
+        lineNumber: 94,
         columnNumber: 5
     }, this);
 }
@@ -332,7 +405,7 @@ _c3 = SkyBackground;
 const __TURBOPACK__default__export__ = SkyBackground;
 var _c, _c1, _c2, _c3;
 __turbopack_context__.k.register(_c, "PaperPlane");
-__turbopack_context__.k.register(_c1, "CartoonPlane");
+__turbopack_context__.k.register(_c1, "RealisticAirliner");
 __turbopack_context__.k.register(_c2, "SkyCloud");
 __turbopack_context__.k.register(_c3, "SkyBackground");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
@@ -1197,14 +1270,11 @@ function useScrollReveal() {
             }
             const observer = new IntersectionObserver({
                 "useScrollReveal.useEffect": ([entry])=>{
-                    if (entry.isIntersecting) {
-                        setIsVisible(true);
-                        observer.disconnect();
-                    }
+                    setIsVisible(entry.isIntersecting);
                 }
             }["useScrollReveal.useEffect"], {
-                threshold: 0.15,
-                rootMargin: "0px 0px -10% 0px"
+                threshold: 0.12,
+                rootMargin: "0px 0px -5% 0px"
             });
             observer.observe(node);
             return ({
@@ -1227,35 +1297,126 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 __turbopack_context__.s([
     "Reveal",
-    ()=>Reveal
+    ()=>Reveal,
+    "default",
+    ()=>__TURBOPACK__default__export__
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$use$2d$scroll$2d$reveal$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/hooks/use-scroll-reveal.ts [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
 ;
-function Reveal({ children, className = "", delayClassName = "" }) {
-    _s();
-    const { ref, isVisible } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$use$2d$scroll$2d$reveal$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useScrollReveal"])();
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        ref: ref,
-        className: `scroll-reveal ${delayClassName} ${isVisible ? "is-visible" : ""} ${className}`,
-        children: children
+;
+// Highly realistic airliner jet silhouette SVG pointing to the right
+function JetSilhouette({ className = "" }) {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+        width: "36",
+        height: "36",
+        viewBox: "0 0 24 24",
+        fill: "currentColor",
+        className: `text-sky-600/75 drop-shadow-[0_4px_12px_rgba(3,105,161,0.22)] transform rotate-90 ${className}`,
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"
+        }, void 0, false, {
+            fileName: "[project]/src/components/ui/reveal.tsx",
+            lineNumber: 22,
+            columnNumber: 7
+        }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/ui/reveal.tsx",
-        lineNumber: 16,
+        lineNumber: 15,
         columnNumber: 5
     }, this);
 }
-_s(Reveal, "aCOyLg7yh4JHGJYS1/e1njthfZ4=", false, function() {
+_c = JetSilhouette;
+function Reveal({ children, className = "", delayClassName = "" }) {
+    _s();
+    const { ref, isVisible } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$use$2d$scroll$2d$reveal$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useScrollReveal"])();
+    const [animState, setAnimState] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("idle");
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Reveal.useEffect": ()=>{
+            let timeoutId;
+            if (isVisible) {
+                setAnimState("entering");
+                timeoutId = window.setTimeout({
+                    "Reveal.useEffect": ()=>{
+                        setAnimState("visible");
+                    }
+                }["Reveal.useEffect"], 50);
+            } else {
+                if (animState === "visible" || animState === "entering") {
+                    setAnimState("leaving");
+                    // Reset to idle (off-screen left) after the leaving animation finishes (takes 1.1s)
+                    timeoutId = window.setTimeout({
+                        "Reveal.useEffect": ()=>{
+                            setAnimState("idle");
+                        }
+                    }["Reveal.useEffect"], 1150); // 1150ms safely covers the 1.1s CSS transition duration
+                }
+            }
+            return ({
+                "Reveal.useEffect": ()=>{
+                    window.clearTimeout(timeoutId);
+                }
+            })["Reveal.useEffect"];
+        }
+    }["Reveal.useEffect"], [
+        isVisible,
+        animState
+    ]);
+    // Determine plane & card transition classes based on state machine
+    let jetClass = "opacity-0";
+    let revealClass = "is-idle";
+    if (animState === "entering" || animState === "visible") {
+        revealClass = "is-visible";
+        jetClass = "is-visible";
+    } else if (animState === "leaving") {
+        revealClass = "is-leaving";
+        jetClass = "is-leaving";
+    }
+    return /* Outer observed anchor wrapper stays in document flow to trigger IntersectionObserver on scroll */ /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        ref: ref,
+        className: "w-full relative min-h-[20px]",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: `scroll-reveal relative w-full ${delayClassName} ${revealClass} ${className}`,
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: `reveal-jet ${jetClass}`,
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(JetSilhouette, {}, void 0, false, {
+                        fileName: "[project]/src/components/ui/reveal.tsx",
+                        lineNumber: 77,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/components/ui/reveal.tsx",
+                    lineNumber: 76,
+                    columnNumber: 9
+                }, this),
+                children
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/ui/reveal.tsx",
+            lineNumber: 72,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/components/ui/reveal.tsx",
+        lineNumber: 70,
+        columnNumber: 5
+    }, this);
+}
+_s(Reveal, "FfcdzTLPXMxulZWCINMeP0nR/0w=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$use$2d$scroll$2d$reveal$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useScrollReveal"]
     ];
 });
-_c = Reveal;
-var _c;
-__turbopack_context__.k.register(_c, "Reveal");
+_c1 = Reveal;
+const __TURBOPACK__default__export__ = Reveal;
+var _c, _c1;
+__turbopack_context__.k.register(_c, "JetSilhouette");
+__turbopack_context__.k.register(_c1, "Reveal");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
@@ -2747,8 +2908,8 @@ const invitationContent = {
         event: {
             date: "Sábado 1 de agosto de 2026",
             time: "4:00 PM",
-            location: "Salón Nube Azul, Jardín Central",
-            mapsQuery: "Salón Nube Azul, Jardín Central"
+            location: "1003 Lorlyn Cir, Batavia, IL 60510",
+            mapsQuery: "1003 Lorlyn Cir, Batavia, IL 60510"
         },
         eventLabels: {
             date: "Fecha de Despegue",
@@ -2806,7 +2967,7 @@ const invitationContent = {
         eventSubtitle: "Todo listo para nuestro despegue",
         eventNote: "Preparamos un viaje suave y lleno de tranquilidad para que disfrutes cada milla sin prisas. ¡Prepara tu pase de abordar!",
         locationImageTitle: "Nuestra Pista de Aterrizaje",
-        locationImageCaption: "El hermoso Salón Nube Azul nos recibirá en sus instalaciones listas para el aterrizaje del gran día.",
+        locationImageCaption: "Te esperamos en 1003 Lorlyn Cir, Batavia, IL. ¡Prepara tu bitácora para el aterrizaje del gran día!",
         mapsButton: "Ver Ruta en Google Maps",
         photosTitle: "Bitácora del Co-Piloto",
         photosIntro: "Galería del Viaje",
@@ -2868,8 +3029,8 @@ const invitationContent = {
         event: {
             date: "Saturday, August 1, 2026",
             time: "4:00 PM",
-            location: "Salón Nube Azul, Jardín Central",
-            mapsQuery: "Salón Nube Azul, Jardín Central"
+            location: "1003 Lorlyn Cir, Batavia, IL 60510",
+            mapsQuery: "1003 Lorlyn Cir, Batavia, IL 60510"
         },
         eventLabels: {
             date: "Departure Date",
@@ -2927,7 +3088,7 @@ const invitationContent = {
         eventSubtitle: "Everything ready for our takeoff",
         eventNote: "We have prepared a smooth and peaceful journey for you to enjoy every mile without rush. Get your boarding pass ready!",
         locationImageTitle: "Our Landing Runway",
-        locationImageCaption: "The beautiful Salón Nube Azul will welcome us, with its facilities fully prepared for landing on our big day.",
+        locationImageCaption: "Join us at 1003 Lorlyn Cir, Batavia, IL. Get your logs ready for landing on our big day!",
         mapsButton: "View Route on Google Maps",
         photosTitle: "Co-Pilot's Logbook",
         photosIntro: "Journey Gallery",
@@ -3542,87 +3703,76 @@ function EventSection({ locale }) {
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "relative overflow-hidden rounded-[1.6rem] border border-sky-100 bg-sky-50/40 p-4 aspect-[1.8/1] flex items-center justify-center",
+                                        className: "relative overflow-hidden rounded-[1.6rem] border border-sky-100/50 aspect-[1.8/1] flex items-center justify-center bg-sky-50 shadow-inner",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "absolute inset-0 bg-[radial-gradient(#bae6fd_1.2px,transparent_1.2px)] [background-size:16px_16px] opacity-40"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
+                                                src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d742.9382988450034!2d-88.32356683028934!3d41.85513879710349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880efcccde91cb91%3A0x2139a0e6a1563fd!2s1003%20Lorlyn%20Cir%2C%20Batavia%2C%20IL%2060510%2C%20EE.%20UU.!5e0!3m2!1ses-419!2smx!4v1783378215691!5m2!1ses-419!2smx",
+                                                className: "absolute border-0 opacity-95",
+                                                style: {
+                                                    top: "-52px",
+                                                    left: "-90px",
+                                                    width: "calc(100% + 180px)",
+                                                    height: "calc(100% + 104px)"
+                                                },
+                                                allowFullScreen: true,
+                                                loading: "lazy",
+                                                referrerPolicy: "strict-origin-when-cross-origin",
+                                                title: "Google Maps Location"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/features/invitation/sections/event-section.tsx",
-                                                lineNumber: 93,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                className: "absolute inset-0 h-full w-full stroke-sky-200/50",
-                                                fill: "none",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                        d: "M-10 40 Q 60 80 120 20 T 300 120",
-                                                        strokeWidth: "6"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/features/invitation/sections/event-section.tsx",
-                                                        lineNumber: 96,
-                                                        columnNumber: 17
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                        d: "M50 -10 L 150 180",
-                                                        strokeWidth: "4"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/features/invitation/sections/event-section.tsx",
-                                                        lineNumber: 97,
-                                                        columnNumber: 17
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                        d: "M120 -10 L 80 180",
-                                                        strokeWidth: "3"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/features/invitation/sections/event-section.tsx",
-                                                        lineNumber: 98,
-                                                        columnNumber: 17
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/src/features/invitation/sections/event-section.tsx",
-                                                lineNumber: 95,
+                                                lineNumber: 92,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "relative flex flex-col items-center",
+                                                className: "absolute inset-0 z-0 bg-transparent"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/features/invitation/sections/event-section.tsx",
+                                                lineNumber: 107,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "absolute top-[49%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full border-2 border-sky-600 shadow-md flex items-center justify-center z-10",
                                                 children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "absolute -top-12 animate-bounce flex flex-col items-center",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "flex h-11 w-11 items-center justify-center rounded-full bg-sky-700 text-white shadow-lg border-2 border-white text-base",
-                                                                children: "✈️"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/features/invitation/sections/event-section.tsx",
-                                                                lineNumber: 105,
-                                                                columnNumber: 19
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "w-0.5 h-3.5 bg-sky-700"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/features/invitation/sections/event-section.tsx",
-                                                                lineNumber: 108,
-                                                                columnNumber: 19
-                                                            }, this)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/src/features/invitation/sections/event-section.tsx",
-                                                        lineNumber: 103,
-                                                        columnNumber: 17
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "h-3.5 w-11 rounded-full bg-sky-950/15 blur-[2px] mt-6 animate-pulse"
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "w-4.5 h-4.5 bg-sky-600 rounded-full flex items-center justify-center",
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "w-2 h-2 bg-white rounded-full"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/features/invitation/sections/event-section.tsx",
+                                                            lineNumber: 113,
+                                                            columnNumber: 19
+                                                        }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/features/invitation/sections/event-section.tsx",
-                                                        lineNumber: 110,
+                                                        lineNumber: 112,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "absolute w-full h-full rounded-full border-2 border-sky-400 animate-ping opacity-35"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/features/invitation/sections/event-section.tsx",
+                                                        lineNumber: 116,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/features/invitation/sections/event-section.tsx",
-                                                lineNumber: 102,
+                                                lineNumber: 110,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "absolute top-[41%] left-[50%] -translate-x-[50%] -translate-y-1/2 z-15 pointer-events-none",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "flex h-11 w-11 items-center justify-center rounded-full bg-sky-700 text-white shadow-[0_8px_20px_rgba(3,105,161,0.35)] border-2 border-white text-base animate-bounce",
+                                                    children: "✈️"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/features/invitation/sections/event-section.tsx",
+                                                    lineNumber: 121,
+                                                    columnNumber: 17
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/features/invitation/sections/event-section.tsx",
+                                                lineNumber: 120,
                                                 columnNumber: 15
                                             }, this)
                                         ]
@@ -3647,14 +3797,14 @@ function EventSection({ locale }) {
                                         className: "h-4.5 w-4.5"
                                     }, void 0, false, {
                                         fileName: "[project]/src/features/invitation/sections/event-section.tsx",
-                                        lineNumber: 121,
+                                        lineNumber: 134,
                                         columnNumber: 13
                                     }, this),
                                     content.mapsButton
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/features/invitation/sections/event-section.tsx",
-                                lineNumber: 115,
+                                lineNumber: 128,
                                 columnNumber: 11
                             }, this)
                         ]

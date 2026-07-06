@@ -6,71 +6,72 @@ Hemos completado la transformación total de la invitación, migrando de la tem�
 
 ## Cambios Realizados
 
-### 1. Actualización de Fecha al 1 de Agosto de 2026 (¡Nuevo!)
+### 1. Reset Off-Screen Sincronizado (Entrada Siempre por la Izquierda) (¡Nuevo!)
+- **Archivos modificados:**
+  - [reveal.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/components/ui/reveal.tsx)
+  - [globals.css](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/app/globals.css)
+- **Cambios:**
+  - **El Problema:** Al hacer scroll hacia arriba y regresar a un apartado, la tarjeta regresaba deslizándose de derecha a izquierda, en lugar de hacerlo desde la izquierda como la primera vez.
+  - **La Solución (Máquina de Estados con Reset):** Diseñamos una máquina de estados en React (`idle` -> `entering` -> `visible` -> `leaving` -> `idle`) coordinada con temporizadores:
+    1. **Entrada y Estancia:** La tarjeta ingresa desde la izquierda (`is-visible`) y se queda en el centro.
+    2. **Salida:** Cuando se desplaza fuera de pantalla, vuela y se va hacia la derecha (`is-leaving`).
+    3. **Reset Instantáneo (Off-Screen):** Al transcurrir **1150 ms** (tiempo en que la tarjeta ya salió de la pantalla y tiene opacidad 0), el estado cambia automáticamente a `is-idle`.
+    4. En el archivo CSS, la clase `.is-idle` aplica una propiedad crítica: `transition: none !important;` y reubica la tarjeta instantáneamente a `-100vw`. Al no tener animación de regreso, el salto a la izquierda ocurre en 0 milisegundos de forma 100% invisible para el usuario.
+  - Al regresar scroll, todas las tarjetas vuelven a entrar impecablemente **siempre desde la izquierda** y salen **siempre hacia la derecha**.
+
+### 2. Corrección del Detección de Intersección por Scroll
+- **Archivo modificado:** [reveal.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/components/ui/reveal.tsx)
+- **Cambios:**
+  - **La Solución (Ancla Estática):** Dividimos la estructura de `<Reveal />` en un contenedor exterior de anclaje estático (`div ref={ref}`) que marca el espacio real de cada tarjeta, y un contenedor animado interior (`div className="scroll-reveal"`) que realiza el planeo.
+
+### 3. Animación de Pancarta Remolcada de Izquierda a Derecha
+- **Archivos modificados:**
+  - [reveal.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/components/ui/reveal.tsx)
+  - [globals.css](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/app/globals.css)
+- **Cambios:**
+  - **Efecto de Arrastre o Remolque:** El avión va remolcando toda la tarjeta de la sección.
+  - **Llegada (de Izquierda a Centro):** Entran planeando desde el extremo izquierdo de la pantalla (`translateX(-100vw)`), asentándose en el centro.
+  - **Despegue (de Centro a Derecha):** Al salir, se van volando hacia el extremo derecho de la pantalla (`translateX(100vw)`).
+
+### 4. Aviones de Fondo Más Reales
+- **Archivo modificado:** [sky-background.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/components/ui/sky-background.tsx)
+- **Cambios:**
+  - Rediseñamos por completo el avión de fondo (`RealisticAirliner`). Cambiamos el vector sencillo por un **avión comercial de pasajeros moderno y altamente detallado**, el cual incluye turbinas, ventanillas y alas en flecha estilizadas.
+
+### 5. Ocultamiento de Punto Rojo y Tarjeta de Google Maps
+- **Archivo modificado:** [event-section.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/features/invitation/sections/event-section.tsx)
+- **Cambios:**
+  - **Recorte de Tarjeta ("Maps"):** Aplicamos un marco de recorte al iframe de Google Maps usando posicionamiento absoluto negativo.
+  - **Ocultamiento del Punto Rojo:** Para ocultar el pin rojo genérico de Google, superpusimos un **Punto de Aterrizaje de Radar (Landing Pad)** blanco y azul en el centro exacto del mapa.
+
+### 6. Integración de Mapa Real de Google Maps con Pin de Avión
+- **Archivos modificados:**
+  - [event-section.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/features/invitation/sections/event-section.tsx)
+  - [invitation.ts](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/data/invitation.ts)
+- **Cambios:**
+  - **Ubicación Real:** Actualizamos la dirección a la del mapa compartido: `"1003 Lorlyn Cir, Batavia, IL 60510"`.
+  - **Iframe de Google Maps:** Cargamos la URL del iframe oficial provisto por ti (`https://www.google.com/maps/embed?pb=!1m18...`), que centra de forma perfecta y precisa la manzana en Batavia, Illinois.
+
+### 7. Actualización de Fecha al 1 de Agosto de 2026
 - **Archivos modificados:**
   - [invitation.ts](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/data/invitation.ts)
   - [countdown-card.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/components/ui/countdown-card.tsx)
 - **Cambios:**
   - Cambiamos la fecha de visualización en español a: `"Sábado 1 de agosto de 2026"`.
-  - Cambiamos la fecha de visualización en inglés a: `"Saturday, August 1, 2026"`.
-  - **Sincronización del Contador:** Actualizamos la fecha objetivo del temporizador de cuenta regresiva en `countdown-card.tsx` a `"2026-08-01T16:00:00"`, para que el cálculo de días, horas y minutos restantes sea 100% exacto para la nueva fecha de despegue.
+  - **Sincronización del Contador:** Actualizamos la fecha objetivo del temporizador de cuenta regresiva en `countdown-card.tsx` a `"2026-08-01T16:00:00"`, para que el cálculo sea exacto.
 
-### 2. Reproductor de Latidos del Bebé
+### 8. Reproductor de Latidos del Bebé
 - **Archivo creado:** [heartbeat-section.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/features/invitation/sections/heartbeat-section.tsx)
-- **Archivo modificado:** [invitation-page.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/features/invitation/invitation-page.tsx)
 - **Cambios:**
   - Creamos el apartado **¿Quieres escuchar mi corazón? / El Latido de Mi Vida**.
-  - **Modo Audio ("Solo Escucha"):** Permite reproducir las dos grabaciones reales del bebé (`corazon.opus` y `corazon2.opus`) con un visualizador de ondas sonoras dinámico (animación CSS en degradado azul y blanco).
-  - **Modo Video ("Mira cómo vivo"):** Un radar de amor simulado que, al pulsarse, reproduce en pantalla completa el video del ultrasonido latiente (`videocorazon.mp4`).
-  - **Sincronización Inteligente:** Vinculamos el estado del reproductor con la música de fondo utilizando eventos del DOM (`pause-bg-music` y `pause-heartbeat`). Al activar el latido del bebé, se silencia automáticamente la música de fondo, y viceversa, impidiendo que los audios se traslapen.
+  - **Modo Audio ("Solo Escucha"):** Permite reproducir las dos grabaciones reales del bebé (`corazon.opus` y `corazon2.opus`).
+  - **Modo Video ("Mira cómo vivo"):** Un radar de amor simulado que reproduce el video del ultrasonido latiente (`videocorazon.mp4`).
 
-### 3. Integración de Fotos Reales en la Bitácora
+### 9. Integración de Fotos Reales en la Bitácora
 - **Archivo modificado:** [memory-carousel.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/features/invitation/components/memory-carousel.tsx)
 - **Cambios:**
-  - **Despegue / Radar de Amor (Diapositiva 1):** Reemplazamos la ilustración vectorial por la foto real del ultrasonido de Santiago (`fotodelbebe.jpeg`), mostrándola en pantalla completa dentro del pase de abordar.
-  - **Equipaje Listo (Diapositiva 2):** Cargamos la foto real del osito de sorpresas (`OsoSorpresa.jpeg`) en la segunda tarjeta, ajustándola para mostrarse de manera impecable y full-bleed en el carrusel.
-  - Las diapositivas 3 y 4 conservan sus animaciones vectoriales aeronáuticas originales hasta recibir las fotos adicionales.
-
-### 4. Fondo de Cielo con Paralaje Aéreo (Aviones más Grandes y Visibles)
-- **Archivo modificado:** [sky-background.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/components/ui/sky-background.tsx)
-- **Cambios:**
-  - **Aviones más Grandes y Visibles:** Incrementé la cantidad total de aviones y nubes en el fondo a 9 capas.
-  - Subí el tamaño de los aviones de papel y aviones de hélice retro (alcanzando dimensiones de **72px y 75px** de ancho).
-  - Aumenté la opacidad de los colores (hasta un **55% y 60%**) para asegurar que resalten nítidamente en pantallas de alta resolución frente al degradado azul del cielo, sin restarle protagonismo a las tarjetas de contenido.
-  - Se mantuvo y suavizó el efecto parallax con aceleraciones y retrasos en base al scroll del usuario, brindando una sensación inmersiva de altura.
-
-### 5. Reescritura de Copys (Temática de Vuelo y Aventura)
-- **Archivo modificado:** [invitation.ts](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/data/invitation.ts)
-- **Cambios:**
-  - El Baby Shower se presenta como el despegue de la mayor aventura de Mónica y Omar con destino a la llegada de su nuevo co-piloto, Santiago.
-  - Se adaptaron descripciones a paradas de escala aeronáuticas: *"Check-in y Bienvenida"*, *"Vuelo a Gran Altura"*, *"Bitácora de Vuelo"*, *"Aterrizaje Feliz"*.
-  - Las etiquetas cambiaron a: *"Fecha de Despegue"*, *"Hora de Embarque"*, *"Pista de Aterrizaje"* y *"Asientos a Reservar"*.
-
-### 6. Animaciones de Aterrizaje Gliding (Efecto Aerodinámico)
-- **Archivo modificado:** [globals.css](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/app/globals.css)
-- **Cambios:**
-  - Rediseñamos la animación de scroll reveal `.scroll-reveal`. Ahora, cuando el usuario navega, las tarjetas realizan un efecto de planeo y aterrizaje en ángulo (inclinándose -6 grados y deslizándose desde arriba-izquierda en 3D), nivelándose y frenando suavemente a medida que se asientan.
-  - Implementamos estelas de viento dinámicas (`cloud-drift-1`/`2`) y trayectorias de planeo de aviones de papel (`plane-drift-fast`/`slow`).
-
-### 7. Nuevos Vectores e Ilustraciones de Aviones
-- **Archivo creado:** [airplane-illustrations.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/features/invitation/components/airplane-illustrations.tsx)
-- **Cambios:**
-  - `BabyAirplane`: Avión retro chubby volando feliz sobre nubes azules y un sol brillante (destinado al Hero).
-  - `PilotsAirplane`: Dos avioncitos (papá con gorra de capitán y mamá con un moño rojo) volando juntos y dibujando una estela de corazón.
-  - `LandingRunway`: Avión descendiendo con tren de aterrizaje y luces de pista destellando en perspectiva.
-  - `UltrasoundBoardingPass`: El ultrasonido de Santiago enmarcado dentro de un boleto o pase de abordar con código de barras y códigos VIP.
-  - `FlightFootprints`: Divisor de trayectorias de vuelo que dibuja una acrobacia aérea con un avioncito de papel.
-  - `FloatingCloudsAndPlanes`: Fondo de nubes y aviones de papel volando en paralelo.
-
-### 8. Animaciones de Controles Temáticos
-- **Dock de Música ([music-dock.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/components/ui/music-dock.tsx)):** Reemplazamos el oso por un avioncito piloto. Al dar play, la hélice gira a gran velocidad, el avión se mece con turbulencia suave (guiñando su ojo de cabina) y emergen notas musicales flotando hacia arriba.
-- **Selector de Idioma ([language-switch.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/components/ui/language-switch.tsx)):** Reemplazamos la carita del oso por un avioncito de papel. Al hacer clic, el avioncito vuela y se desliza entre ES y EN con un wiggling rotativo en hover.
-
-### 9. RSVP con Terminología de Vuelo y Preview Dinámico
-- **Archivo modificado:** [rsvp-section.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/features/invitation/sections/rsvp-section.tsx)
-- **Cambios:**
-  - Formulario adaptado a pases de abordar, clases de pasajeros (individual vs. grupo familiar), y selección de asientos (`-` / `+`).
-  - Previsualización en tiempo real del pase de abordar generado en WhatsApp con emojis aeronáuticos (`✈️`, `🎫`, `🛫`, `☁️`).
+  - **Despegue / Radar de Amor (Diapositiva 1):** Cargamos la foto real de tu bebé (`fotodelbebe.jpeg`).
+  - **Equipaje Listo (Diapositiva 2):** Cargamos la foto real de tu oso sorpresa (`OsoSorpresa.jpeg`).
 
 ---
 
@@ -80,11 +81,11 @@ Hemos compilado el proyecto localmente mediante `npm run build`:
 ```bash
 ▲ Next.js 16.2.10 (Turbopack)
 Creating an optimized production build ...
-✓ Compiled successfully in 857ms
+✓ Compiled successfully in 892ms
 Running TypeScript ...
-Finished TypeScript in 1060ms ...
+Finished TypeScript in 1202ms ...
 Generating static pages (3/3) ...
-✓ Generating static pages in 186ms
+✓ Generating static pages in 141ms
 Finalizing page optimization ...
 Route (app)             Size
 ┌ ○ /                   92.4 kB

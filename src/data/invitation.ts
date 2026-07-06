@@ -15,8 +15,8 @@ export const invitationContent = {
     event: {
       date: "Sábado 1 de agosto de 2026",
       time: "4:00 PM",
-      location: "Salón Nube Azul, Jardín Central",
-      mapsQuery: "Salón Nube Azul, Jardín Central"
+      location: "1003 Lorlyn Cir, Batavia, IL 60510",
+      mapsQuery: "1003 Lorlyn Cir, Batavia, IL 60510"
     },
     eventLabels: {
       date: "Fecha de Despegue",
@@ -69,7 +69,7 @@ export const invitationContent = {
     eventSubtitle: "Todo listo para nuestro despegue",
     eventNote: "Preparamos un viaje suave y lleno de tranquilidad para que disfrutes cada milla sin prisas. ¡Prepara tu pase de abordar!",
     locationImageTitle: "Nuestra Pista de Aterrizaje",
-    locationImageCaption: "El hermoso Salón Nube Azul nos recibirá en sus instalaciones listas para el aterrizaje del gran día.",
+    locationImageCaption: "Te esperamos en 1003 Lorlyn Cir, Batavia, IL. ¡Prepara tu bitácora para el aterrizaje del gran día!",
     mapsButton: "Ver Ruta en Google Maps",
     photosTitle: "Bitácora del Co-Piloto",
     photosIntro: "Galería del Viaje",
@@ -131,8 +131,8 @@ export const invitationContent = {
     event: {
       date: "Saturday, August 1, 2026",
       time: "4:00 PM",
-      location: "Salón Nube Azul, Jardín Central",
-      mapsQuery: "Salón Nube Azul, Jardín Central"
+      location: "1003 Lorlyn Cir, Batavia, IL 60510",
+      mapsQuery: "1003 Lorlyn Cir, Batavia, IL 60510"
     },
     eventLabels: {
       date: "Departure Date",
@@ -185,7 +185,7 @@ export const invitationContent = {
     eventSubtitle: "Everything ready for our takeoff",
     eventNote: "We have prepared a smooth and peaceful journey for you to enjoy every mile without rush. Get your boarding pass ready!",
     locationImageTitle: "Our Landing Runway",
-    locationImageCaption: "The beautiful Salón Nube Azul will welcome us, with its facilities fully prepared for landing on our big day.",
+    locationImageCaption: "Join us at 1003 Lorlyn Cir, Batavia, IL. Get your logs ready for landing on our big day!",
     mapsButton: "View Route on Google Maps",
     photosTitle: "Co-Pilot's Logbook",
     photosIntro: "Journey Gallery",
