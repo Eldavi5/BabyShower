@@ -90,7 +90,7 @@ export function EventSection({ locale }: EventSectionProps) {
             {/* Real Google Maps embed iframe with absolute custom airplane pin */}
             <div className="relative overflow-hidden rounded-[1.6rem] border border-sky-100/50 aspect-[1.8/1] flex items-center justify-center bg-sky-50 shadow-inner">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d742.9382988450034!2d-88.32356683028934!3d41.85513879710349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880efcccde91cb91%3A0x2139a0e6a1563fd!2s1003%20Lorlyn%20Cir%2C%20Batavia%2C%20IL%2060510%2C%20EE.%20UU.!5e0!3m2!1ses-419!2smx!4v1783378215691!5m2!1ses-419!2smx"
+                src="https://maps.google.com/maps?q=1034%20Lorlyn%20Cir,%20Batavia,%20IL%2060510&t=&z=17&ie=UTF8&iwloc=&output=embed"
                 className="absolute border-0 opacity-95"
                 style={{
                   top: "-52px",

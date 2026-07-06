@@ -2908,8 +2908,8 @@ const invitationContent = {
         event: {
             date: "Sábado 1 de agosto de 2026",
             time: "4:00 PM",
-            location: "1003 Lorlyn Cir, Batavia, IL 60510",
-            mapsQuery: "1003 Lorlyn Cir, Batavia, IL 60510"
+            location: "1034 Lorlyn Cir, Batavia, IL 60510",
+            mapsQuery: "1034 Lorlyn Cir, Batavia, IL 60510"
         },
         eventLabels: {
             date: "Fecha de Despegue",
@@ -2967,7 +2967,7 @@ const invitationContent = {
         eventSubtitle: "Todo listo para nuestro despegue",
         eventNote: "Preparamos un viaje suave y lleno de tranquilidad para que disfrutes cada milla sin prisas. ¡Prepara tu pase de abordar!",
         locationImageTitle: "Nuestra Pista de Aterrizaje",
-        locationImageCaption: "Te esperamos en 1003 Lorlyn Cir, Batavia, IL. ¡Prepara tu bitácora para el aterrizaje del gran día!",
+        locationImageCaption: "Te esperamos en 1034 Lorlyn Cir, Batavia, IL. ¡Prepara tu bitácora para el aterrizaje del gran día!",
         mapsButton: "Ver Ruta en Google Maps",
         photosTitle: "Bitácora del Co-Piloto",
         photosIntro: "Galería del Viaje",
@@ -3029,8 +3029,8 @@ const invitationContent = {
         event: {
             date: "Saturday, August 1, 2026",
             time: "4:00 PM",
-            location: "1003 Lorlyn Cir, Batavia, IL 60510",
-            mapsQuery: "1003 Lorlyn Cir, Batavia, IL 60510"
+            location: "1034 Lorlyn Cir, Batavia, IL 60510",
+            mapsQuery: "1034 Lorlyn Cir, Batavia, IL 60510"
         },
         eventLabels: {
             date: "Departure Date",
@@ -3088,7 +3088,7 @@ const invitationContent = {
         eventSubtitle: "Everything ready for our takeoff",
         eventNote: "We have prepared a smooth and peaceful journey for you to enjoy every mile without rush. Get your boarding pass ready!",
         locationImageTitle: "Our Landing Runway",
-        locationImageCaption: "Join us at 1003 Lorlyn Cir, Batavia, IL. Get your logs ready for landing on our big day!",
+        locationImageCaption: "Join us at 1034 Lorlyn Cir, Batavia, IL. Get your logs ready for landing on our big day!",
         mapsButton: "View Route on Google Maps",
         photosTitle: "Co-Pilot's Logbook",
         photosIntro: "Journey Gallery",
@@ -3706,7 +3706,7 @@ function EventSection({ locale }) {
                                         className: "relative overflow-hidden rounded-[1.6rem] border border-sky-100/50 aspect-[1.8/1] flex items-center justify-center bg-sky-50 shadow-inner",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
-                                                src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d742.9382988450034!2d-88.32356683028934!3d41.85513879710349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880efcccde91cb91%3A0x2139a0e6a1563fd!2s1003%20Lorlyn%20Cir%2C%20Batavia%2C%20IL%2060510%2C%20EE.%20UU.!5e0!3m2!1ses-419!2smx!4v1783378215691!5m2!1ses-419!2smx",
+                                                src: "https://maps.google.com/maps?q=1034%20Lorlyn%20Cir,%20Batavia,%20IL%2060510&t=&z=17&ie=UTF8&iwloc=&output=embed",
                                                 className: "absolute border-0 opacity-95",
                                                 style: {
                                                     top: "-52px",

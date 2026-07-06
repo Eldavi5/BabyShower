@@ -6,25 +6,32 @@ Hemos completado la transformación total de la invitación, migrando de la tem�
 
 ## Cambios Realizados
 
-### 1. Reset Off-Screen Sincronizado (Entrada Siempre por la Izquierda) (¡Nuevo!)
+### 1. Actualización de Dirección a 1034 Lorlyn Cir (¡Nuevo!)
+- **Archivos modificados:**
+  - [invitation.ts](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/data/invitation.ts)
+  - [event-section.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/features/invitation/sections/event-section.tsx)
+- **Cambios:**
+  - **Textos de la Dirección:** Cambiamos todas las referencias visuales de la dirección de `1003 Lorlyn Cir` a `1034 Lorlyn Cir, Batavia, IL 60510` tanto en los bloques de contenido en español como en inglés.
+  - **Iframe de Google Maps:** Modificamos la URL del iframe oficial a una consulta de búsqueda exacta para `1034 Lorlyn Cir, Batavia, IL 60510` (`https://maps.google.com/maps?q=1034...&output=embed`). Esto centra el mapa geométricamente en la nueva manzana de Batavia, manteniendo nuestro radar de aterrizaje y el avioncito personalizado sobre el pin rojo original de Google de forma perfectamente alineada.
+
+### 2. Reset Off-Screen Sincronizado (Entrada Siempre por la Izquierda)
 - **Archivos modificados:**
   - [reveal.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/components/ui/reveal.tsx)
   - [globals.css](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/app/globals.css)
 - **Cambios:**
-  - **El Problema:** Al hacer scroll hacia arriba y regresar a un apartado, la tarjeta regresaba deslizándose de derecha a izquierda, en lugar de hacerlo desde la izquierda como la primera vez.
-  - **La Solución (Máquina de Estados con Reset):** Diseñamos una máquina de estados en React (`idle` -> `entering` -> `visible` -> `leaving` -> `idle`) coordinada con temporizadores:
+  - **Máquina de Estados con Reset:** Diseñamos una máquina de estados en React (`idle` -> `entering` -> `visible` -> `leaving` -> `idle`) coordinada con temporizadores:
     1. **Entrada y Estancia:** La tarjeta ingresa desde la izquierda (`is-visible`) y se queda en el centro.
     2. **Salida:** Cuando se desplaza fuera de pantalla, vuela y se va hacia la derecha (`is-leaving`).
     3. **Reset Instantáneo (Off-Screen):** Al transcurrir **1150 ms** (tiempo en que la tarjeta ya salió de la pantalla y tiene opacidad 0), el estado cambia automáticamente a `is-idle`.
     4. En el archivo CSS, la clase `.is-idle` aplica una propiedad crítica: `transition: none !important;` y reubica la tarjeta instantáneamente a `-100vw`. Al no tener animación de regreso, el salto a la izquierda ocurre en 0 milisegundos de forma 100% invisible para el usuario.
   - Al regresar scroll, todas las tarjetas vuelven a entrar impecablemente **siempre desde la izquierda** y salen **siempre hacia la derecha**.
 
-### 2. Corrección del Detección de Intersección por Scroll
+### 3. Corrección del Detección de Intersección por Scroll
 - **Archivo modificado:** [reveal.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/components/ui/reveal.tsx)
 - **Cambios:**
   - **La Solución (Ancla Estática):** Dividimos la estructura de `<Reveal />` en un contenedor exterior de anclaje estático (`div ref={ref}`) que marca el espacio real de cada tarjeta, y un contenedor animado interior (`div className="scroll-reveal"`) que realiza el planeo.
 
-### 3. Animación de Pancarta Remolcada de Izquierda a Derecha
+### 4. Animación de Pancarta Remolcada de Izquierda a Derecha
 - **Archivos modificados:**
   - [reveal.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/components/ui/reveal.tsx)
   - [globals.css](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/app/globals.css)
@@ -33,26 +40,25 @@ Hemos completado la transformación total de la invitación, migrando de la tem�
   - **Llegada (de Izquierda a Centro):** Entran planeando desde el extremo izquierdo de la pantalla (`translateX(-100vw)`), asentándose en el centro.
   - **Despegue (de Centro a Derecha):** Al salir, se van volando hacia el extremo derecho de la pantalla (`translateX(100vw)`).
 
-### 4. Aviones de Fondo Más Reales
+### 5. Aviones de Fondo Más Reales
 - **Archivo modificado:** [sky-background.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/components/ui/sky-background.tsx)
 - **Cambios:**
   - Rediseñamos por completo el avión de fondo (`RealisticAirliner`). Cambiamos el vector sencillo por un **avión comercial de pasajeros moderno y altamente detallado**, el cual incluye turbinas, ventanillas y alas en flecha estilizadas.
 
-### 5. Ocultamiento de Punto Rojo y Tarjeta de Google Maps
+### 6. Ocultamiento de Punto Rojo y Tarjeta de Google Maps
 - **Archivo modificado:** [event-section.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/features/invitation/sections/event-section.tsx)
 - **Cambios:**
   - **Recorte de Tarjeta ("Maps"):** Aplicamos un marco de recorte al iframe de Google Maps usando posicionamiento absoluto negativo.
   - **Ocultamiento del Punto Rojo:** Para ocultar el pin rojo genérico de Google, superpusimos un **Punto de Aterrizaje de Radar (Landing Pad)** blanco y azul en el centro exacto del mapa.
 
-### 6. Integración de Mapa Real de Google Maps con Pin de Avión
+### 7. Integración de Mapa Real de Google Maps con Pin de Avión
 - **Archivos modificados:**
   - [event-section.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/features/invitation/sections/event-section.tsx)
   - [invitation.ts](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/data/invitation.ts)
 - **Cambios:**
-  - **Ubicación Real:** Actualizamos la dirección a la del mapa compartido: `"1003 Lorlyn Cir, Batavia, IL 60510"`.
-  - **Iframe de Google Maps:** Cargamos la URL del iframe oficial provisto por ti (`https://www.google.com/maps/embed?pb=!1m18...`), que centra de forma perfecta y precisa la manzana en Batavia, Illinois.
+  - **Ubicación Real:** Actualizamos la dirección a la del mapa compartido: `"1034 Lorlyn Cir, Batavia, IL 60510"`.
 
-### 7. Actualización de Fecha al 1 de Agosto de 2026
+### 8. Actualización de Fecha al 1 de Agosto de 2026
 - **Archivos modificados:**
   - [invitation.ts](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/data/invitation.ts)
   - [countdown-card.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/components/ui/countdown-card.tsx)
@@ -60,14 +66,14 @@ Hemos completado la transformación total de la invitación, migrando de la tem�
   - Cambiamos la fecha de visualización en español a: `"Sábado 1 de agosto de 2026"`.
   - **Sincronización del Contador:** Actualizamos la fecha objetivo del temporizador de cuenta regresiva en `countdown-card.tsx` a `"2026-08-01T16:00:00"`, para que el cálculo sea exacto.
 
-### 8. Reproductor de Latidos del Bebé
+### 9. Reproductor de Latidos del Bebé
 - **Archivo creado:** [heartbeat-section.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/features/invitation/sections/heartbeat-section.tsx)
 - **Cambios:**
   - Creamos el apartado **¿Quieres escuchar mi corazón? / El Latido de Mi Vida**.
   - **Modo Audio ("Solo Escucha"):** Permite reproducir las dos grabaciones reales del bebé (`corazon.opus` y `corazon2.opus`).
   - **Modo Video ("Mira cómo vivo"):** Un radar de amor simulado que reproduce el video del ultrasonido latiente (`videocorazon.mp4`).
 
-### 9. Integración de Fotos Reales en la Bitácora
+### 10. Integración de Fotos Reales en la Bitácora
 - **Archivo modificado:** [memory-carousel.tsx](file:///Volumes/Mac/MacExterno/Documents/NewProyectMona/src/features/invitation/components/memory-carousel.tsx)
 - **Cambios:**
   - **Despegue / Radar de Amor (Diapositiva 1):** Cargamos la foto real de tu bebé (`fotodelbebe.jpeg`).
@@ -81,11 +87,11 @@ Hemos compilado el proyecto localmente mediante `npm run build`:
 ```bash
 ▲ Next.js 16.2.10 (Turbopack)
 Creating an optimized production build ...
-✓ Compiled successfully in 892ms
+✓ Compiled successfully in 851ms
 Running TypeScript ...
-Finished TypeScript in 1202ms ...
+Finished TypeScript in 1108ms ...
 Generating static pages (3/3) ...
-✓ Generating static pages in 141ms
+✓ Generating static pages in 135ms
 Finalizing page optimization ...
 Route (app)             Size
 ┌ ○ /                   92.4 kB
